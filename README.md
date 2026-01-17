@@ -17,6 +17,14 @@ And give it the following policies:
 <img width="1309" height="266" alt="image" src="https://github.com/user-attachments/assets/e1c7eabc-90d6-4148-b778-5d25e5982177" />  
 After getting it set up and AWS configured squared away type: aws ecr create-repository --repository-name fargate-app and get this output:  
 <img width="814" height="316" alt="image" src="https://github.com/user-attachments/assets/c03fc9be-7f81-4125-8448-d1d5a7cb307a" />  
+After that run the command $ECR_PASSWORD = aws ecr get-login-password --region us-east-1  
+Then run echo $ECR_PASSWORD | docker login --username AWS --password-stdin <account_id>.dkr.ecr.us.east-1.amazonaws.com.  
+Then run docker tag fargate-app:latest <account_id>.dkr.ecr.us-east-1.amazonaws.com.  
+Then run docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/fargate-app:latest
+
+# ECR Cluster
+
+
 
 
 
