@@ -23,6 +23,17 @@ Then run docker tag fargate-app:latest <account_id>.dkr.ecr.us-east-1.amazonaws.
 Then run docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/fargate-app:latest
 
 # ECR Cluster
+Type in the search bar in AWS, ECR which will take you to the Elastic Container Service and then click on clusters in the side bar which will take you to this page:  
+<img width="1868" height="941" alt="image" src="https://github.com/user-attachments/assets/b50ba9ec-b870-4472-8e0f-620fc2902093" />  
+Click on Create Cluster and you will see this:  
+<img width="1837" height="912" alt="image" src="https://github.com/user-attachments/assets/6198b0ca-8f58-47da-b375-e341aea679ae" />  
+Name the cluster fargate-cluster, infrastructure as fargate only, then click on create and wait a couple seconds.  
+After creation go to the task definitions and click on create new task definition and you will see this:  
+<img width="1578" height="899" alt="image" src="https://github.com/user-attachments/assets/646d6fb7-32cc-4b60-aa87-0c4ba0294342" />  
+Name the task family fargate-task-app. Have the CPU at 0.5 and Memory at 1 GB. Then go create a role that has a use case of Elastic Container Service, name it ecsTaskExecutionRole and create the role. After creation, attach the AmazonECSTaskExecutionRolePolicy onto it.  
+
+
+
 
 
 
