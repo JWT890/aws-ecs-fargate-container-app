@@ -30,7 +30,13 @@ Click on Create Cluster and you will see this:
 Name the cluster fargate-cluster, infrastructure as fargate only, then click on create and wait a couple seconds.  
 After creation go to the task definitions and click on create new task definition and you will see this:  
 <img width="1578" height="899" alt="image" src="https://github.com/user-attachments/assets/646d6fb7-32cc-4b60-aa87-0c4ba0294342" />  
-Name the task family fargate-task-app. Have the CPU at 0.5 and Memory at 1 GB. Then go create a role that has a use case of Elastic Container Service, name it ecsTaskExecutionRole and create the role. After creation, attach the AmazonECSTaskExecutionRolePolicy onto it.  
+Name the task family fargate-task-app. Have the CPU at 0.5 and Memory at 1 GB. Then go create a role that has a use case of Elastic Container Service, name it ecsTaskExecutionRole and create the role. After creation, attach the AmazonECSTaskExecutionRolePolicy onto it. 
+Then in Container name is fargate-app-task, then for the Image URL put '<account_id>.dkr.ecr.us-east-1.amazon.com/fargate-app:latest' in it, container port at 80 with tcp, then click on create.  
+Then click on clusters and then click on the cluster that was created and you will see this:  
+<img width="1581" height="509" alt="image" src="https://github.com/user-attachments/assets/8d61f238-4a20-45a5-9267-b5090592d262" />  
+
+
+
 
 
 
