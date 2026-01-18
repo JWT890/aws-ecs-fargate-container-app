@@ -40,6 +40,8 @@ Then on the services section click on create.
 For task definition family, have it as fargate-task-app with defintion revision as 1 and service name as fargate-app-service. Then for environment select launch type, keep at as Fargate and version as latest.  
 Then scroll down to security groups and click on create new security group, name it fargate-app-sg, description as Security group for Fargate app tasks. Then for inbound rules have the type as HTTP and source as anywhere.  
 Then scroll down to laod balancing and click on use load balancing.  
+Name the load balancer fargate-app-alb then scroll on down to target group and select create new target group and name it fargate-app-tg. Then create service and wait for a few minutes.  
+
 
 
 
