@@ -34,6 +34,15 @@ Name the task family fargate-task-app. Have the CPU at 0.5 and Memory at 1 GB. T
 Then in Container name is fargate-app-task, then for the Image URL put '<account_id>.dkr.ecr.us-east-1.amazon.com/fargate-app:latest' in it, container port at 80 with tcp, then click on create.  
 Then click on clusters and then click on the cluster that was created and you will see this:  
 <img width="1581" height="509" alt="image" src="https://github.com/user-attachments/assets/8d61f238-4a20-45a5-9267-b5090592d262" />  
+Then click on the cluster and you will see this:  
+<img width="1555" height="661" alt="image" src="https://github.com/user-attachments/assets/cc4f9062-3af9-44ec-aea7-ed4d424c6754" />  
+Then on the services section click on create.  
+For task definition family, have it as fargate-task-app with defintion revision as 1 and service name as fargate-app-service. Then for environment select launch type, keep at as Fargate and version as latest.  
+Then scroll down to security groups and click on create new security group, name it fargate-app-sg, description as Security group for Fargate app tasks. Then for inbound rules have the type as HTTP and source as anywhere.  
+Then scroll down to laod balancing and click on use load balancing.  
+
+
+
 
 
 
