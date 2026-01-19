@@ -47,7 +47,7 @@ Before making the cluster service go to the ecsTaskExecutionRole and make sure i
   "Statement": [  
     {  
       "Effect": "Allow",  
-      "Principal": {  
+      "Principal":  {  
         "Service": "ecs-tasks.amazonaws.com"  
       },  
       "Action": "sts:AssumeRole"  
