@@ -41,6 +41,23 @@ For task definition family, have it as fargate-task-app with defintion revision 
 Then scroll down to security groups and click on create new security group, name it fargate-app-sg, description as Security group for Fargate app tasks. Then for inbound rules have the type as HTTP and source as anywhere.  
 Then scroll down to laod balancing and click on use load balancing.  
 Name the load balancer fargate-app-alb then scroll on down to target group and select create new target group and name it fargate-app-tg. Then create service and wait for a few minutes.  
+Before making the cluster service go to the ecsTaskExecutionRole and make sure it has the AmazonECSTaskExecutionPolicy and within the policy, go to the trust relationship tabs and make to see something like this:  
+{  
+  "Version": "2012-10-17",  
+  "Statement": [  
+    {  
+      "Effect": "Allow",  
+      "Principal": {  
+        "Service": "ecs-tasks.amazonaws.com"  
+      },  
+      "Action": "sts:AssumeRole"  
+    }  
+  }  
+}  
+After checking that go about creating the cluster service and you should see this after a few minutes:  
+<img width="1563" height="689" alt="image" src="https://github.com/user-attachments/assets/5a369c62-5969-4dd4-8ad2-00c36d02bb5d" />  
+
+    
 
 
 
