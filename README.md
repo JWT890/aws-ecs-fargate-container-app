@@ -56,6 +56,19 @@ Before making the cluster service go to the ecsTaskExecutionRole and make sure i
 }  
 After checking that go about creating the cluster service and you should see this after a few minutes:  
 <img width="1563" height="689" alt="image" src="https://github.com/user-attachments/assets/5a369c62-5969-4dd4-8ad2-00c36d02bb5d" />  
+Then click on the service and go the tasks portion and verify if they are in a running state like so:  
+<img width="1540" height="261" alt="image" src="https://github.com/user-attachments/assets/ae55f900-69ca-4b07-b68a-3c1e0852f90e" />  
+Then go to the EC2 section and click on load balancers and select the load balancer that was created from prior. You will see this page:  
+<img width="1607" height="880" alt="image" src="https://github.com/user-attachments/assets/2180cfbf-2fa0-4aa0-9730-45cae3d78b95" />  
+Then copy the dns name and open a new browser tab and paste the dns name with http:// at the beginning of it and you will see this:  
+<img width="1856" height="1039" alt="image" src="https://github.com/user-attachments/assets/59e62132-7fc7-4712-bcbc-139cf814e496" />  
+
+# CloudWatch
+Go to the ECS tab and click on task definitions and select the fargate-task-app task and click on the option dropdown of create new revisision.  
+<img width="1853" height="602" alt="image" src="https://github.com/user-attachments/assets/470541e8-b363-440a-963b-c457f45a83f3" />  
+
+
+
 
     
 
