@@ -76,3 +76,8 @@ Then click on create a scaling policy and see this:
 Keep it on target tracking and name the service matric: ECSServiceAverageCPUUtilization. Set target percent utilization at 70%, scale in at 120 and scale out at 60.  
 Then click create scaling policy and see this:  
 <img width="1559" height="904" alt="image" src="https://github.com/user-attachments/assets/691aefd3-c9ff-4554-99e5-357d9daa1a48" />  
+Then run the commands:  
+docker build -t fargate-app .  
+docker tag fargate-app:latest <account_id>.dkr.ecr.us-east-1.amazonaws.com/fargate-app:latest  
+docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/fargate-app:latest  
+Then run aws ecs update-service --cluster fargate-cluster --service fargate-app-service --force-new-deployment  
