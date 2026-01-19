@@ -69,26 +69,10 @@ Go to the ECS tab and click on task definitions and select the fargate-task-app 
 After making sure the logs portion of the container are in the right places, then click on create and the task definition will be created.  
 Then go back to clusters, go to services, click on fargate-app-service, click on service auto scaling tab to see this:  
 <img width="1568" height="906" alt="image" src="https://github.com/user-attachments/assets/0eedc055-e145-46b4-8835-6d4e0b96da88" />  
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Click on the set number of tasks and set minimum to 2 and maximum to 6 and you will see this after saving:  
+<img width="1567" height="812" alt="image" src="https://github.com/user-attachments/assets/d95bc211-2371-45ba-9a64-ccb1a64425e5" />  
+Then click on create a scaling policy and see this:  
+<img width="1593" height="784" alt="image" src="https://github.com/user-attachments/assets/a276937b-3874-4053-9d8b-ba51a6e9e61e" />  
+Keep it on target tracking and name the service matric: ECSServiceAverageCPUUtilization. Set target percent utilization at 70%, scale in at 120 and scale out at 60.  
+Then click create scaling policy and see this:  
+<img width="1559" height="904" alt="image" src="https://github.com/user-attachments/assets/691aefd3-c9ff-4554-99e5-357d9daa1a48" />  
