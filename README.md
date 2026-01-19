@@ -66,6 +66,11 @@ Then copy the dns name and open a new browser tab and paste the dns name with ht
 # CloudWatch
 Go to the ECS tab and click on task definitions and select the fargate-task-app task and click on the option dropdown of create new revisision.  
 <img width="1853" height="602" alt="image" src="https://github.com/user-attachments/assets/470541e8-b363-440a-963b-c457f45a83f3" />  
+After making sure the logs portion of the container are in the right places, then click on create and the task definition will be created.  
+Then go back to clusters, go to services, click on fargate-app-service, click on service auto scaling tab to see this:  
+<img width="1568" height="906" alt="image" src="https://github.com/user-attachments/assets/0eedc055-e145-46b4-8835-6d4e0b96da88" />  
+
+
 
 
 
