@@ -81,3 +81,5 @@ docker build -t fargate-app .
 docker tag fargate-app:latest <account_id>.dkr.ecr.us-east-1.amazonaws.com/fargate-app:latest  
 docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/fargate-app:latest  
 Then run aws ecs update-service --cluster fargate-cluster --service fargate-app-service --force-new-deployment  
+
+This project demonstrates the end-to-end deployment of a containerized application on AWS using a fully serverless architecture with ECS and Fargate. It showcases real-world DevOps and cloud engineering practices, including Docker image creation, secure image storage in Amazon ECR, IAM role configuration, and scalable service orchestration without managing underlying infrastructure. The repository highlights hands-on experience with cloud automation, container orchestration, and production-ready deployment workflows aligned with modern enterprise environments.  
